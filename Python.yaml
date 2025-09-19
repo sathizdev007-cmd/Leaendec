@@ -1,0 +1,19 @@
+name:Running Py
+on:push
+
+jobs:
+ name:Hello
+ runs-on:ubuntu-latest
+
+ steps:
+  -name:clone repo
+  uses:actions/checkout@v5
+
+  -name:steup Py
+  uses: actions/checkout@v5
+  uses: actions/setup-python@v6
+  with:
+    python-version: '3.13'
+  
+  -name:run python
+  run:python hello.py
